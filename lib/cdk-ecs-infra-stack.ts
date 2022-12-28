@@ -34,7 +34,7 @@ export class CdkEcsInfraStack extends cdk.Stack {
     taskDefinition.addContainer('MyContainer', {
     // build the container image provided with the sample application in SampleApp folder
     // CDK will build the container image using the Dockerfile in the SampleApp directory
-      image: ecs.ContainerImage.fromRegistry('hello-world'),
+      image: ecs.ContainerImage.fromRegistry('docker/getting-started'),
       portMappings: [{ containerPort: 80 }],
       memoryReservationMiB: 256,
       cpu : 256,
